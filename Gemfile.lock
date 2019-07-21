@@ -1,0 +1,52 @@
+GEM
+  remote: https://gems.ruby-china.com/
+  specs:
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.1.5)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    equalizer (0.0.11)
+    et-orbi (1.2.1)
+      tzinfo
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    fugit (1.2.3)
+      et-orbi (~> 1.1, >= 1.1.8)
+      raabro (~> 1.1)
+    ice_nine (0.11.2)
+    inflecto (0.0.2)
+    mini_portile2 (2.4.0)
+    multipart-post (2.1.1)
+    nokogiri (1.10.3)
+      mini_portile2 (~> 2.4.0)
+    raabro (1.1.6)
+    rufus-scheduler (3.6.0)
+      fugit (~> 1.1, >= 1.1.6)
+    telegram-bot-ruby (0.10.1)
+      faraday
+      inflecto
+      virtus
+    thread_safe (0.3.6)
+    tzinfo (2.0.0)
+      concurrent-ruby (~> 1.0)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nokogiri (= 1.10.3)
+  rufus-scheduler (= 3.6.0)
+  telegram-bot-ruby (= 0.10.1)
+
+BUNDLED WITH
+   1.17.3
