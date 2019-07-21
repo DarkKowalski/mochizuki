@@ -40,8 +40,6 @@ Telegram::Bot::Client.run($token) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}, Mochizuki here, timer is #{timer_status}, use /query to get current balance. ")
     
     when '/timer_off'
-      puts "#{$admin}".downcase
-      puts message.chat.username.downcase
       if message.chat.username.downcase == "#{$admin}".downcase
         $timer_enable = false
         bot.api.send_message(chat_id: message.chat.id, text: "Okay, timer got disabled.")
