@@ -23,13 +23,15 @@ docker run -d \
         -e tg_bot_post_data="1919" \
         # send warning when balance gets below threshold
         -e tg_bot_threshold="810" \
+        # timer frequency
+        -e tg_bot_frequency="10s" \
         # channel for warning messages
         -e tg_bot_channel="SenpaChannel" \
         # only admin can operate schedule
         -e tg_bot_admin="Tadokoro" \
         # optional proxy
-        #-e http_proxy="http://proxy.example.com:1919"
-        #-e https_proxy="http://proxy.example.com:1919"
+        #-e http_proxy="http://proxy.example.com:1919" \
+        #-e https_proxy="http://proxy.example.com:1919" \
         --name="mochizuki-bot" \
         -it darkkowalski/mochizuki-bot:latest 
 ```
