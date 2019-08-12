@@ -9,8 +9,9 @@ $post_data = ENV['tg_bot_post_data'].to_s
 $threshold = ENV['tg_bot_threshold'].to_i
 $channel = ENV['tg_bot_channel'].to_s
 $admin = ENV['tg_bot_admin'].to_s
+$frequency = ENV['tg_bot_frequency'].to_s
 
-$timer_enable = false
+$timer_enable = true
 $low_power = false
 
 fetcher = Fetcher.new($post_data)
@@ -18,11 +19,11 @@ fetcher = Fetcher.new($post_data)
 Telegram::Bot::Client.run($token) do |bot|
 
   scheduler = Rufus::Scheduler.new
-  scheduler.every '3h' do
+  scheduler.every "#{$frequency}" do
     if $timer_enable
       balance = timer
       if $low_power
-        bot.api.send_message(chat_id: "@#{$channel}", text: "Warning! Remaining balance: #{balance}. Timer off, restart manually /timer_on")
+        bot.api.send_message(chat_id: "@#{$channel}", text: "Warning! Remaining balance: #{balance}. Current threshold: #{$threshold}. Timer off, restart manually /timer_on")
       end
     end
   end
