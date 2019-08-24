@@ -63,7 +63,7 @@ Telegram::Bot::Client.run($token) do |bot|
         balance = fetcher.get_balance
         target_message = "your dorm: #{dorm}, balance: #{balance}"
       rescue 
-        target_message = "somthing went wrong, try again later."
+        target_message = "something went wrong, try again later."
       end
       bot.api.send_message(chat_id: message.chat.id, text: "Hi, #{message.from.first_name}, #{target_message}")
 
