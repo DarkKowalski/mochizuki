@@ -48,7 +48,7 @@ Workaround: set up a proxy bypass filter, **Privoxy** supports this.
 
 [同济大学能源管理中心电费查询](http://202.120.163.129:88/)
 
-This website uses pervious version of **APS.NET**.
+This website uses previous version of **APS.NET**.
 
 Mochizuki will auto handle Session ID, but you should config post data manually to indicate which dorm you would like to set.
 
