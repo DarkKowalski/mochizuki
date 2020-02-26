@@ -44,11 +44,13 @@ class Fetcher
 
   def get_dorm
     @dorm = @target_data.to_s.scan(/\d+/)[0]
-    return @dorm
+    
+    @dorm
   end
 
   def get_balance
     @balance = @target_data.to_s.scan(/(\d+[,.]\d+)/)[0][0]
-    return @balance
+    
+    @balance
   end
 end

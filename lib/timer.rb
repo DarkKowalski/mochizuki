@@ -19,5 +19,5 @@ def timer
     $low_power = false
   end
 
-  return balance
+  balance
 end
