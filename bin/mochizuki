@@ -1,0 +1,7 @@
+#!/bin/ruby
+# frozen_string_literal: true
+
+require'mochizuki'
+
+load('mochizuki.conf')
+Mochizuki::Bot.new.start

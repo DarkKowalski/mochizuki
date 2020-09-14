@@ -1,0 +1,4 @@
+/.vscode
+/test/reports/
+/mochizuki.conf
+Gemfile.lock

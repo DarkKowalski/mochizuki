@@ -1,5 +1,10 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-#source 'https://gems.ruby-china.com'
-gem 'nokogiri', ">= 1.10.8"
-gem 'telegram-bot-ruby', "0.10.1"
-gem 'rufus-scheduler', "3.6.0"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+gemspec
+
+group :rubocop do
+  gem 'rubocop', '~> 0.90.0', require: false
+end
