@@ -19,7 +19,16 @@ gem install mochizuki
 
 **Recommended**
 
-See [mochizuki-docker](https://github.com/DarkKowalski/mochizuki-docker)
+```bash
+docker pull darkkowalski/mochizuki
+```
+
+```bash
+docker run --name mochizuki \
+           --restart=always \
+           -v /path/to/mochizuki.conf:/app/mochizuki.conf \
+           -d -it darkkowalski/mochizuki
+```
 
 ## Configuration
 

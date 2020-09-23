@@ -2,3 +2,4 @@
 /test/reports/
 /mochizuki.conf
 Gemfile.lock
+/test.sh

@@ -1,0 +1,13 @@
+/.git
+/test
+/screenshots
+
+.rubocop.yml
+.gitignore
+
+Gemfile.lock
+LICENSE
+README.md
+Rakefile
+
+mochizuki.conf
