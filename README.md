@@ -57,3 +57,15 @@ drceng     ->  building
 dr_ceng    ->  floor
 drfangjian ->  dorm
 ```
+
+## Known issues
+
+### Telegram returned 403
+
+```
+Telegram API has returned the error. (ok: "false", error_code: "403", description: "Forbidden: bot was kicked from the supergroup chat") (Telegram::Bot::Exceptions::ResponseError)
+```
+
+This is a telegram internal issue, not this gem's.
+
+See [Stack Overflow](https://stackoverflow.com/questions/34040277/telegram-bot-api-errors-codes-integrating-groups-and-channels)
