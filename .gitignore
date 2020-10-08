@@ -3,3 +3,4 @@
 /mochizuki.conf
 Gemfile.lock
 /test.sh
+mochizuki-*.gem

@@ -18,14 +18,14 @@ module Mochizuki
       def update_status(power)
         last = Mochizuki.status.below_threshold
         current = power.to_f < @config.alarm_threshold.to_f
-        @logger.info "Status, @below_threshold, last: #{last}, current: #{current}"
+        @logger.info "Update status, @below_threshold, last: #{last}, current: #{current}"
 
         Mochizuki.status.below_threshold = current
 
         return unless !current && last # re-enabled auto alarm
 
         Mochizuki.status.alarmed_before = false
-        @logger.info "Status, @alarmed_before, #{@alarmed_before}, auto alarm enabled"
+        @logger.info 'Auto alarm enabled'
       end
     end
 
@@ -38,7 +38,7 @@ module Mochizuki
         @alarmed_before = false
       end
 
-      def auto_alarm_enabled?
+      def auto_alarm_triggered?
         if @below_threshold.nil?
           @logger.error "Unable to check status, @below_threshold can't be nil"
           raise Mochizuki::Error, 'Invalid @below_threshold'

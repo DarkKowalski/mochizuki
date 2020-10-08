@@ -16,9 +16,10 @@ module Mochizuki
       scheduler.every @config.query_interval.to_s do
         power = Mochizuki::Fetcher.new.fetch
         @logger.info "Auto query, #{power} kWh remaining"
-        if Mochizuki.status.auto_alarm_enabled?
+        if Mochizuki.status.auto_alarm_triggered?
           yield(power)
           Mochizuki.status.alarmed_before = true
+          @logger.info 'Auto alarm is suppressed for now'
         end
       end
     end

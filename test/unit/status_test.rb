@@ -11,14 +11,14 @@ class StatusTest < Minitest::Test
     Mochizuki.reset_status
   end
 
-  def test_valid_auto_alarm_enabled
+  def test_valid_auto_alarm_triggered
     @status.below_threshold = true
     @status.alarmed_before = false
-    result = @status.auto_alarm_enabled?
+    result = @status.auto_alarm_triggered?
     assert(result == true)
   end
 
-  def test_invalid_auto_alarm_enabled
-    assert_raises(Mochizuki::Error) { @status.auto_alarm_enabled? }
+  def test_invalid_auto_alarm_triggered
+    assert_raises(Mochizuki::Error) { @status.auto_alarm_triggered? }
   end
 end

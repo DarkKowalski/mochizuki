@@ -31,6 +31,7 @@ module Mochizuki
     end
 
     def fetch
+      @logger.info 'Try to query'
       fetch_viewstate
       fetch_cookie
       power = fetch_power
