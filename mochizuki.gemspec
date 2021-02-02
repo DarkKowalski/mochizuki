@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   }
 
   s.add_runtime_dependency 'faraday', '~>1.0.1'
-  s.add_runtime_dependency 'nokogiri', '~>1.10.10'
+  s.add_runtime_dependency 'nokogiri', '~>1.11.0'
   s.add_runtime_dependency 'rufus-scheduler', '~>3.6.0'
   s.add_runtime_dependency 'telegram-bot-ruby', '~>0.12.0'
 
